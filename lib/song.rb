@@ -11,9 +11,9 @@ class Song
   extend Findable 
   include Paramable 
 
-  def initialize
-    @@songs << self
-  end
+  #def initialize
+   # @@songs << self
+  #end
 
   #def self.find_by_name(name)
    # @@songs.detect{|a| a.name == name}
