@@ -6,11 +6,14 @@ class Artist
 
   @@artists = []
   
-  extend Memorable
+  extend Memorable::ClassMethods
+  include Memorable::InstanceMethods 
+  extend Findable
+  include Paramable 
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  #def self.find_by_name(name)
+   # @@artists.detect{|a| a.name == name}
+  #end
 
   def initialize
     @@artists << self
